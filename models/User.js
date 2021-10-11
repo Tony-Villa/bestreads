@@ -25,15 +25,17 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: 'asdasd',
+      default: 'https://picsum.photos/200',
     },
     readChallenge: {
       type: Number,
     },
-    reviews: {
-      type: mongoose.Types.ObjectID,
-      ref: 'Review',
-    },
+    reviews: [
+      {
+        type: mongoose.Types.ObjectID,
+        ref: 'Review',
+      },
+    ],
   },
   {
     timestamps: true,

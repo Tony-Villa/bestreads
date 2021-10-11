@@ -6,18 +6,22 @@ const bookClubSchema = new Schema(
       type: String,
       required: true,
     },
-    comment: {
-      type: String,
-      required: true,
-    },
+    comment: [
+      {
+        type: String,
+        required: true,
+      },
+    ],
     book: {
       type: mongoose.Types.ObjectID,
       ref: 'Book',
     },
-    user: {
-      type: mongoose.Types.ObjectID,
-      ref: 'User',
-    },
+    user: [
+      {
+        type: mongoose.Types.ObjectID,
+        ref: 'User',
+      },
+    ],
   },
   {
     timestamps: true,
