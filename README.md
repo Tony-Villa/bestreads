@@ -18,7 +18,7 @@ Join groups of avid readers in a judgement free, and welcoming place!
 
 When the user lands on the page without being logged in, they will be welcomed with a splash page with the season's artwork as well as a section to either **Log In** or **Register**.
 
-Under the login section there will be a section showing a selection of features books.
+Under the login section there will be a section showing a selection of featured books.
 
 ## After Logging In
 
