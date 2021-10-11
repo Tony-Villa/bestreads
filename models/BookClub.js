@@ -1,4 +1,5 @@
-const Schema = require('mongoose').Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const bookClubSchema = new Schema(
   {
@@ -13,12 +14,12 @@ const bookClubSchema = new Schema(
       },
     ],
     book: {
-      type: mongoose.Types.ObjectID,
+      type: mongoose.Types.ObjectId,
       ref: 'Book',
     },
     user: [
       {
-        type: mongoose.Types.ObjectID,
+        type: mongoose.Types.ObjectId,
         ref: 'User',
       },
     ],
