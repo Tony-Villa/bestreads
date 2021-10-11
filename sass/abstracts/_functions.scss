@@ -1,0 +1,5 @@
+@use "sass:map";
+
+@function get-font-size-level($level) {
+  @return map-get($font-size-levels, '#{$level}');
+}
