@@ -6,6 +6,9 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 const app = express();
 
+// Connect to DB
+require('./config/db.connection');
+
 // URL Parser Middleware
 app.use(express.urlencoded({ extended: false }));
 
