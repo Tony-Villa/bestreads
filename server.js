@@ -9,8 +9,12 @@ const app = express();
 // Connect to DB
 require('./config/db.connection');
 
-// URL Parser Middleware
+// View Engine
+app.set('view engine', 'ejs');
+
+// URL Parser Middleware && Method Overide
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 // Controllers
 const controllers = require('./controllers/');
