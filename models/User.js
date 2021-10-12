@@ -1,4 +1,5 @@
-const Schema = require('mongoose').Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
@@ -25,15 +26,17 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: 'asdasd',
+      default: 'https://picsum.photos/200',
     },
     readChallenge: {
       type: Number,
     },
-    reviews: {
-      type: mongoose.Types.ObjectID,
-      ref: 'Review',
-    },
+    reviews: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'Review',
+      },
+    ],
   },
   {
     timestamps: true,

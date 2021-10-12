@@ -1,6 +1,5 @@
 const nonFiction = [
   {
-    _id: '',
     title: 'The Autobiography of Malcolm X',
     author: ' Alex Haley , Attallah Shabazz',
     genre: 'Non Fiction',
@@ -9,7 +8,6 @@ const nonFiction = [
     coverImg: 'https://images-na.ssl-images-amazon.com/images/I/51K6Bsvbn6L._SX303_BO1,204,203,200_.jpg',
   },
   {
-    _id: '',
     title: 'The Double Helix: A Personal Account of the Discovery of the Structure of DNA ',
     author: 'James D. Watson ',
     genre: 'Non Fiction',
@@ -18,7 +16,6 @@ const nonFiction = [
     coverImg: 'https://images-na.ssl-images-amazon.com/images/I/51AyqonNA3L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
   },
   {
-    _id: '',
     title: 'Freakonomics',
     author: ' Steven D. Levitt, Stephen J Dubner ',
     genre: 'Non Fiction',
@@ -27,7 +24,6 @@ const nonFiction = [
     coverImg: 'https://images-na.ssl-images-amazon.com/images/I/51nyohMG0cL._SX326_BO1,204,203,200_.jpg',
   },
   {
-    _id: '',
     title: "A Room of One's Own",
     author: 'Virginia Woolf',
     genre: 'Non Fiction',
@@ -36,7 +32,6 @@ const nonFiction = [
     coverImg: 'https://images-na.ssl-images-amazon.com/images/I/41M8TLKnZDL._SX331_BO1,204,203,200_.jpg',
   },
   {
-    _id: '',
     title: 'A Brief History of Time',
     author: 'Stephen Hawking',
     genre: 'Non Fiction',
@@ -48,7 +43,6 @@ const nonFiction = [
 
 const psych = [
   {
-    _id: '',
     title: 'Blink',
     author: ' Malcolm Gladwell',
     genre: 'psych',
@@ -57,7 +51,6 @@ const psych = [
     coverImg: 'https://images-na.ssl-images-amazon.com/images/I/41vkrXtFeZL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
   },
   {
-    _id: '',
     title: 'The Paradox of Choice',
     author: 'Barry Schwartz, Ken Kliban',
     genre: 'psych',
@@ -66,7 +59,6 @@ const psych = [
     coverImg: 'https://m.media-amazon.com/images/I/41rJvsNboFL.jpg',
   },
   {
-    _id: '',
     title: 'Drive',
     author: ' Daniel H. Pink ',
     genre: 'psych',
@@ -75,7 +67,6 @@ const psych = [
     coverImg: 'https://images-na.ssl-images-amazon.com/images/I/41ef9z7YKnL._SX331_BO1,204,203,200_.jpg',
   },
   {
-    _id: '',
     title: 'Incognito',
     author: 'David Eagleman',
     genre: 'psych',
@@ -84,7 +75,6 @@ const psych = [
     coverImg: 'https://images-na.ssl-images-amazon.com/images/I/41eUHJZtmTL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
   },
   {
-    _id: '',
     title: 'Quiet',
     author: 'Susan Cain',
     genre: 'psych',

@@ -1,0 +1,25 @@
+<%- include('../partials/head.ejs', {page: 'Add Book'}) %>
+
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+  <section class="add-book-section">
+    <form action="/" method="POST">
+      <!-- Book Title Field -->
+      <div class="field">
+        <label class="label">Book Title:</label>
+        <div class="input-container">
+          <input type="text" class="data-input" placeholder="Book Title" name="title" />
+        </div>
+      </div>
+
+      <!-- Book Author field -->
+      <div class="field">
+        <label class="label">Book Title:</label>
+        <div class="input-container">
+          <input type="text" class="data-input" placeholder="Book Title" name="title" />
+        </div>
+      </div>
+    </form>
+  </section>
+</body>

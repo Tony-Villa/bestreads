@@ -21,6 +21,8 @@ app.use(methodOverride('_method'));
 const controllers = require('./controllers/');
 // Route Middlewares
 app.use('/', controllers.landing);
+app.use('/browse', controllers.browse);
+app.use('/book', controllers.book);
 
 // Listen
 app.listen(PORT, () => {
