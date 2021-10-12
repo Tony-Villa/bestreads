@@ -1,3 +1,7 @@
+#nav-container {
+  display: flex;
+}
+
 .longer-data-input {
   width: 90px;
   height: 390px;
