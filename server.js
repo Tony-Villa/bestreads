@@ -17,12 +17,19 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
+
+
+
+
 // Controllers
 const controllers = require('./controllers/');
 // Route Middlewares
 app.use('/', controllers.landing);
 app.use('/browse', controllers.browse);
 app.use('/book', controllers.book);
+
+// Routes
+
 
 // Listen
 app.listen(PORT, () => {
