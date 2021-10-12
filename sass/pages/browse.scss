@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.book-thumb-container {
+  height: 180px;
+  width: 115px;
+
+  .book-thumb {
+    height: 180px;
+    width: 115px;
+  }
+}

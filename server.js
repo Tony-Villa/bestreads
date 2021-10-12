@@ -9,7 +9,8 @@ const app = express();
 
 // View Engine
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use(express.static(__dirname));
 
 // URL Parser Middleware && Method Overide
 app.use(express.urlencoded({ extended: false }));
