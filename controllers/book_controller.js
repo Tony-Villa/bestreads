@@ -8,12 +8,13 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res, next) => {
   try {
-    // console.log(req.body);
+    console.log(req.body);
     await Book.create(req.body);
-    return res.redirect('book/addBook.ejs');
+    return res.redirect('/book');
   } catch (err) {
+    return console.log(err);
     res.status(400).send(err);
-    return next();
+    // return next();
   }
 });
 
