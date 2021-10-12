@@ -3,7 +3,30 @@
 .main-content {
   max-width: 900px;
   margin: 0 auto;
+  margin-top: 15px;
   display: flex;
+}
+
+.left-three-quarter {
+  width: 70%;
+  display: flex;
+  padding: 10px;
+  //   border: 1px solid black;
+}
+
+.books-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.book-content {
+  width: 115px;
+}
+
+.browse-book-title {
+  font-size: 0.75em;
 }
 
 .book-thumb-container {
