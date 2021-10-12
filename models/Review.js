@@ -1,27 +1,23 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const reviewSchema = new mongoose.Schema({
-    _id: {
-        type: String,
-        require: true,
-    },
-   rating: {
-        type: String,
-        require: true,
-    },
-    comment: {
-        type: String, 
-        require: false
-    }, 
-    book: {
-        type: String,
-        require: true
-    },
-    user: {
-        type: String,
-        require: true
-    },
+const reviewSchema = new Schema({
+  rating: {
+    type: Number,
+    min: 0,
+    max: 5,
+    required: [true, 'Please provide a rating between 0 and 5'],
+  },
+  comment: {
+    type: String,
+    required: [true, 'You must provide a reason for your review rating.'],
+  },
+  book: {
+    type: mongoose.Types.ObjectId,
+    ref: 'Book',
+  },
+  user: {
+    type: mongoose.Types.ObjectId,
+    ref: 'User',
+  },
 });
-
-const Books = mongoose.model('Books', bookSchema);
-module.exports = Books;
