@@ -28,3 +28,7 @@ const bookClubSchema = new Schema(
     timestamps: true,
   }
 );
+
+const BookClub = mongoose.model('BookClub', bookClubSchema);
+
+module.exports = BookClub;

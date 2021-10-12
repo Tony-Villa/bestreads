@@ -26,13 +26,13 @@ const bookSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  reviews: [
-    {
-      type: mongoose.Types.ObjectId,
-      ref: 'Review',
-    },
-  ],
+  // reviews: [
+  //   {
+  //     type: mongoose.Types.ObjectId,
+  //     ref: 'Review',
+  //   },
+  // ],
 });
 
-const Books = mongoose.model('Books', bookSchema);
-module.exports = Books;
+const Book = mongoose.model('Book', bookSchema);
+module.exports = Book;
