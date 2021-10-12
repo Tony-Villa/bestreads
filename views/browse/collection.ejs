@@ -1,0 +1,24 @@
+<%- include('../partials/head.ejs', {page: 'Browse'}) %>
+
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+  <main class="collection-content">
+    <section class="books-container">
+      <% for(let i = 0; i < books.length; i++){ %>
+      <!--  -->
+      <% const book = books[i] %>
+      <div class="book-card">
+        <div class="book-content">
+          <h3 class="browse-book-title">
+            <a href="/browse/<%= book.id %>"><%= book.title %></a>
+          </h3>
+        </div>
+        <figure class="book-thumb">
+          <img src="<%= book.coverImg %> " alt="<%= book.title %> cover image" />
+        </figure>
+      </div>
+      <% } %>
+    </section>
+  </main>
+</body>

@@ -4,6 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "watch-sass": "sass --watch sass/main.scss public/styles/styles.css",
+    "watch-nodemon": "nodemon",
+    "dev": "concurrently -n sass,server -c 'bgMagenta.bold,bgGray.bold' 'npm:watch-sass' 'npm:watch-nodemon'",
+    "start": "node server.js",
     "test": "jest"
   },
   "repository": {
@@ -29,6 +33,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
+    "concurrently": "^6.3.0",
     "jest": "^27.2.5"
   }
 }
