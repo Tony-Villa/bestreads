@@ -3,9 +3,6 @@
 <body>
   <%- include('../partials/nav.ejs') %>
 
-  <% console.log(user._id) %> 
-  <% console.log('hello') %> 
-
   <main class="main-content-show-container">
     <div class="flex-container-column"></div>
     <section class="book-details-full">
@@ -13,7 +10,7 @@
         <img src="<%= book.coverImg %> " alt="" />
       </div>
       <div class="show-book-headers">
-        <h2 class="show-book-title"><%= book.title %> <%= user.name %></h2>
+        <h2 class="show-book-title"><%= book.title %></h2>
         <h4 class="show-book-author"><%= book.author %></h4>
         <div class="genre-area">
           <p class="show-genre">Genre: <%= book.genre %></p>

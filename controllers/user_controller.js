@@ -57,9 +57,11 @@ router.post('/login', async (req, res) => {
 
   //Session
   req.session.currentUser = {
-    _id: user._id,
+    id: user._id,
     name: user.name,
   };
+
+  console.log(req.session.currentUser.id);
 
   return res.redirect('/');
 });
@@ -67,6 +69,7 @@ router.post('/login', async (req, res) => {
 router.get('/logout', function (req, res) {
   try {
     req.session.destroy();
+    console.log(req.session);
     return res.redirect('/');
   } catch (error) {
     console.log(error);
