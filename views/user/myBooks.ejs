@@ -1,0 +1,69 @@
+<%- include('../partials/head.ejs', {page: 'My Books'}) %>
+
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+<main>
+
+    <section class="read-review-container">
+        <h2>What other readers thought:</h2>
+        
+        <% reviews.forEach(review => { %>
+            
+            <section class="review-card">
+
+                <div>
+                   <img src="<%= review.book.coverImg %>" alt="">  
+                </div>
+
+                <div class="review-user-info">
+                    <h3 class="user-review-display">
+                        <%= review.user.name %> 
+                    </h3>
+                    
+                    <div class="star-rating">
+                        
+                        <% for( let index = 0; index < 5; index++ ) { %> <% if
+            (review.rating > index) { %>
+                <span class="icon">
+                    <i class="fas fa-star yellow"></i>
+                    </span>
+                    <% } else { %>
+                        <span class="icon">
+                            <i class="fas fa-star"></i>
+                            </span>
+                            <% } %> <% } %>
+                            </div>
+                            
+                            <p><%= new Date(review.createdAt).toLocaleString() %></p>
+                            </div>
+                            
+                            <div class="display-review-content">
+                                <p class="review-comment-display">
+                                    <%= review.comment %> 
+                                    </p>
+                                    </div>
+                                    
+                <% if (typeof user !== 'undefined') { %>
+                    <% if (user.id == review.user.id)  { %> 
+             <div class="review-options-container">
+              <a href="/reviews/<%= review.id %>/edit"><button class="edit-btn btn">
+                Edit Review
+                </button></a> 
+                
+                
+                <form action="/reviews/<%= review.id %>?_method=DELETE" method="POST">
+                    <button class="delete-btn btn">
+                        Delete Review
+                        </button>                 
+                        </form>
+                        </div>
+                        
+                        <% } %> 
+                        <% } %>
+                        
+                        <% }) %> 
+            </section>
+        </main>
+ </body>
+                        

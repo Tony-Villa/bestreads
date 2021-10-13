@@ -2,7 +2,7 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const session = require('express-session');
-const { User } = require('../models');
+const { User, Review } = require('../models');
 const { registerValidation, loginValidation } = require('../functions/validation');
 
 router.get('/register', (req, res) => {
@@ -75,6 +75,16 @@ router.get('/logout', function (req, res) {
     console.log(error);
     return res.send(error);
   }
+});
+
+router.get('/mybooks', async (req, res) => {
+  const userBooks = await Review.find({ user: req.session.currentUser.id }).populate('user book');
+
+  const context = {
+    reviews: userBooks,
+  };
+
+  res.render('user/myBooks.ejs', context);
 });
 
 module.exports = router;

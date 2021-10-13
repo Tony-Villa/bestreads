@@ -13,7 +13,11 @@
         <li class="nav-link">
           <a href="/browse">Browse</a>
         </li>
-        <li class="nav-link">My Books</li>
+        <% if (typeof user !== 'undefined') { %>
+        <li class="nav-link">
+          <a href="/user/mybooks">My Books</a>
+        </li>
+        <% } %> 
       </ul>
     </section>
 
