@@ -29,3 +29,14 @@ router.post('/', async (req, res, next) => {
     return next();
   }
 });
+
+// edit route
+router.get('/:reviewId/edit', async (req, res) => {
+  try {
+    const review = await Review.findById(req.params.reviewId);
+
+    return res.render('reviews/edit.ejs', { review: review });
+  } catch {
+    if (error) return console.log(error);
+  }
+});
