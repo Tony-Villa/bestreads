@@ -16,6 +16,31 @@ app.use(express.static(__dirname));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
+/* SECTION External modules */
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+
+/* SECTION App Config */
+app.use(
+  session({
+    // where to store the sessions in mongodb
+    store: MongoStore.create({ mongoUrl: process.env.__MONGO_URI__ }),
+    // secret key is used to sign every cookie to say its is valid
+    secret: process.env.TOKEN_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    // configure the experation of the cookie
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24 * 7 * 2, // two weeks
+    },
+  })
+);
+/* SECTION Middleware */
+app.use(function (req, res, next) {
+  res.locals.user = req.session.currentUser;
+  next();
+});
+
 // Connect to DB
 require('./config/db.connection');
 
