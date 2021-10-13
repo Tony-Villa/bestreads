@@ -61,15 +61,12 @@ router.post('/login', async (req, res) => {
     name: user.name,
   };
 
-  console.log(req.session.currentUser.id);
-
   return res.redirect('/');
 });
 
 router.get('/logout', function (req, res) {
   try {
     req.session.destroy();
-    console.log(req.session);
     return res.redirect('/');
   } catch (error) {
     console.log(error);
