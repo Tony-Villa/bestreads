@@ -1,9 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla:ital@1&family=Mulish:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla:ital@1&family=Mulish:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*
+font-family: 'Hind Madurai', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Mulish', sans-serif;
+*/
 #nav-container {
   background-color: #f4f1ea;
   height: 50px;
@@ -71,10 +78,49 @@
   padding: 5px;
 }
 
+/*
+font-family: 'Hind Madurai', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Mulish', sans-serif;
+*/
 .main-content {
   max-width: 900px;
   margin: 0 auto;
+  margin-top: 15px;
   display: flex;
+}
+
+.left-three-quarter {
+  width: 70%;
+  display: flex;
+  padding: 10px;
+}
+
+.books-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.books-container .book-card {
+  padding: 15px;
+}
+.books-container .browse-book-title {
+  font-family: "Karla", sans-serif;
+  text-align: center;
+}
+.books-container a {
+  text-decoration: none;
+  color: #564132;
+}
+
+.book-content {
+  width: 115px;
+}
+
+.browse-book-title {
+  font-size: 0.75em;
 }
 
 .book-thumb-container {

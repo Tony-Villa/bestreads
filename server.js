@@ -25,6 +25,7 @@ const controllers = require('./controllers/');
 app.use('/', controllers.landing);
 app.use('/browse', controllers.browse);
 app.use('/book', controllers.book);
+app.use('/user', controllers.user);
 
 // Routes
 
