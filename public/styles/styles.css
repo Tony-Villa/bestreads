@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
 /*
 font-family: 'Hind Madurai', sans-serif;
 font-family: 'Karla', sans-serif;
@@ -153,6 +159,21 @@ font-family: 'Mulish', sans-serif;
 .book-thumb-container .book-thumb {
   height: 180px;
   width: 115px;
+}
+
+.main-content-show-container {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card {
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=styles.css.map */

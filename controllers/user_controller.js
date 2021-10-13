@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
 
   //Session
   req.session.currentUser = {
-    id: user._id,
+    _id: user._id,
     name: user.name,
   };
 
