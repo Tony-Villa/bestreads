@@ -1,21 +1,14 @@
 const router = require('express').Router();
 const { User } = require('../models');
+const { registerValidation, loginValidation } = require('../functions/validation');
 
 router.get('/register', (req, res) => {
   res.render('user/register.ejs');
 });
 
-// VALIDATION
-const Joi = require('joi');
-const schema = Joi.object({
-  name: Joi.string().min(6).required(),
-  email: Joi.string().min(6).required().email(),
-  password: Joi.string().min(6).required(),
-});
-
 router.post('/register', async (req, res) => {
   //Validate data
-  const { error } = schema.validate(req.body);
+  const { error } = registerValidation(req.body);
 
   if (error) return res.status(400).send(error.details[0].message);
 
