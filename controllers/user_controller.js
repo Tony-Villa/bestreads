@@ -35,4 +35,25 @@ router.post('/register', async (req, res) => {
   }
 });
 
+//Login
+router.get('/login', (req, res) => {
+  res.render('user/login.ejs');
+});
+
+router.post('/login', async (req, res) => {
+  //Validate data
+  const { error } = loginValidation(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
+
+  // check if username exists
+  const user = await User.findOne({ name: req.body.name });
+  if (!user) return res.status(400).send('Email or password is wrong');
+
+  //Password is Correct
+  const validPass = await bcrypt.compare(req.body.password, user.password);
+  if (!validPass) return res.status(400).send('Invalid password');
+
+  res.redirect('/');
+});
+
 module.exports = router;

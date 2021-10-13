@@ -4,20 +4,12 @@
   <%- include('../partials/nav.ejs') %>
 
   <section class="add-book-section">
-    <form action="/user/register" method="POST" autocomplete="off">
+    <form action="/user/login" method="POST" autocomplete="off">
       <!-- Username Field -->
       <div class="field-container">
         <label class="label">Name:</label>
         <div class="input-container">
           <input type="text" class="data-input" placeholder="Your Name" name="name" />
-        </div>
-      </div>
-
-      <!-- Email field -->
-      <div class="field-container">
-        <label class="label">Email:</label>
-        <div class="input-container">
-          <input type="text" class="data-input" placeholder="your@email.com" name="email" />
         </div>
       </div>
 
@@ -30,7 +22,7 @@
       </div>
 
       <div class="create-book-container">
-        <button class="btn register-user">Register User</button>
+        <button class="btn register-user">Log In</button>
       </div>
     </form>
   </section>
