@@ -31,12 +31,16 @@ const userSchema = new Schema(
     readChallenge: {
       type: Number,
     },
-    reviews: [
-      {
-        type: mongoose.Types.ObjectId,
-        ref: 'Review',
-      },
-    ],
+    date: {
+      type: Date,
+      default: Date.now,
+    },
+    // reviews: [
+    //   {
+    //     type: mongoose.Types.ObjectId,
+    //     ref: 'Review',
+    //   },
+    // ],ll
   },
   {
     timestamps: true,

@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// create router
+// create route
 router.post('/', async (req, res, next) => {
   try {
     await Review.create(req.body);
@@ -40,3 +40,5 @@ router.get('/:reviewId/edit', async (req, res) => {
     if (error) return console.log(error);
   }
 });
+
+module.exports = router;
