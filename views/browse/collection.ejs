@@ -16,7 +16,9 @@
             </h3>
           </div>
           <figure class="book-thumb-container">
-            <img class="book-thumb" src="<%= book.coverImg %> " alt="<%= book.title %> cover image" />
+            <a href="/browse/<%= book.id %>">
+              <img class="book-thumb" src="<%= book.coverImg %> " alt="<%= book.title %> cover image" />
+            </a>
           </figure>
         </div>
         <% } %>
