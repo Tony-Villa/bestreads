@@ -18,3 +18,14 @@ router.get('/', async (req, res) => {
     console.log(err);
   }
 });
+
+// create router
+router.post('/', async (req, res, next) => {
+  try {
+    await Review.create(req.body);
+    return res.redirect('back');
+  } catch (err) {
+    console.log(err);
+    return next();
+  }
+});
