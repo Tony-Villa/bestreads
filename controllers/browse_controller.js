@@ -22,10 +22,10 @@ router.get('/', async (req, res) => {
 // Show Route
 router.get('/:id', async (req, res, next) => {
   try {
-    const books = await Book.findById(req.params.id);
+    const book = await Book.findById(req.params.id);
 
     const context = {
-      books,
+      book,
     };
     return res.render('browse/show.ejs', context);
   } catch (error) {

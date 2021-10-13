@@ -1,4 +1,5 @@
 @use '../abstracts/' as *;
+@use '../base' as f;
 
 .main-content {
   max-width: 900px;
@@ -19,6 +20,21 @@
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
+  flex-wrap: wrap;
+
+  .book-card {
+    padding: 15px;
+  }
+
+  .browse-book-title {
+    font-family: f.$title-font;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+  }
 }
 
 .book-content {
@@ -27,6 +43,7 @@
 
 .browse-book-title {
   font-size: 0.75em;
+  // font-size: get-font-size-level(3);
 }
 
 .book-thumb-container {
