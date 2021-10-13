@@ -64,7 +64,17 @@
           <p class="review-comment-display">
             <%= review.comment %> 
           </p>
-  
+
+            <% if (user.id == review.user.id)  { %> 
+              <a href="/reviews/<%= review.id %>/edit"><button class="edit-btn btn">
+                Edit Review
+              </button></a> 
+              
+              <button class="delete-btn btn">
+                Delete Review
+              </button>
+              <% } %> 
+
           <% }) %> 
 
         </section>

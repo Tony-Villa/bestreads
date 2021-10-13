@@ -22,9 +22,12 @@ const { Book, Review, User } = require('../models');
 // create route
 router.post('/', async (req, res, next) => {
   try {
-    await Review.create(req.body);
+    const review = {
+      ...req.body,
+      user: req.session.currentUser.id,
+    };
 
-    console.log(req.body);
+    await Review.create(review);
 
     return res.redirect('back');
   } catch (err) {
