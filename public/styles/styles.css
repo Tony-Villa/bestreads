@@ -69,6 +69,29 @@ font-family: 'Mulish', sans-serif;
 
 .nav-link {
   list-style-type: none;
+  color: #564132;
+}
+
+.log-info {
+  width: 12%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.log-in-register {
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-info {
+  color: #564132;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #564132;
 }
 
 .longer-data-input {

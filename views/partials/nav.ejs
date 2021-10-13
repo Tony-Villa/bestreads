@@ -4,6 +4,16 @@
       <img src="../../assets/logos/logo-full.png" alt="bestreads logo" class="nav-logo" />
     </section>
 
+    <!-- Nav Links -->
+    <section class="nav-links-container">
+      <ul class="nav-links">
+        <li class="nav-link">
+          <a href="/browse">Browse</a>
+        </li>
+        <li class="nav-link">My Books</li>
+      </ul>
+    </section>
+
     <!-- <section class="search-bar-container"> -->
     <form action="/search" class="search-form search-bar-container">
       <input class="search-bar" type="text" placeholder="Search books" name="q" />
@@ -12,11 +22,33 @@
     </form>
     <!-- </section> -->
 
-    <section class="nav-links-container">
-      <ul class="nav-links">
-        <li class="nav-link">Browse</li>
-        <li class="nav-link">My Books</li>
-      </ul>
+    <section class="log-info">
+      <section class="user-info">
+        <% if (typeof user !== 'undefined') { %>
+        <section class="navbar-item"><%= user.name %></div>
+      </section>
+      <section class="log-links">
+        <ul>
+          <li class="nav-link"><a href="/user/logout">Logout</a></li>
+        </ul>
+      </section>
     </section>
+    <% } else { %>
+    </section>
+  </section>
+    <section class="log-in-register">
+      <section>
+        <ul>
+          <li class="nav-link"><a href="/user/login">Log In</a></li>
+        </ul>
+      </section>
+      <section class="log-links">
+        <ul>
+          <li class="nav-link"><a href="/user/register">Register</a></li>
+        </ul>
+      </section>
+    </section>
+
+    <% } %>
   </div>
 </nav>
