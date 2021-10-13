@@ -47,4 +47,41 @@ router.get('/:reviewId/edit', async (req, res) => {
   }
 });
 
+// update controller
+router.put('/:reviewId', async (req, res) => {
+  try {
+    const review = await Review.findById(req.params.reviewId);
+
+    const bookid = review.book;
+
+    await Review.findByIdAndUpdate(
+      req.params.reviewId,
+      {
+        $set: req.body,
+      },
+      {
+        new: true,
+      }
+    );
+
+    console.log(req.body);
+
+    return res.redirect(`/browse/${bookid}`);
+  } catch (error) {
+    return console.log(error);
+  }
+});
+
+// delete controller
+router.delete('/:id', async (req, res, next) => {
+  try {
+    await Review.findByIdAndDelete(req.params.id);
+    return res.redirect('back');
+  } catch (error) {
+    console.log(error);
+    req.error = error;
+    return next();
+  }
+});
+
 module.exports = router;
