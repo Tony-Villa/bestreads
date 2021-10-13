@@ -28,6 +28,14 @@ app.use('/book', controllers.book);
 
 // Routes
 
+
+
+
+// ==404==
+app.get('/*', (req, res) => {
+  const context = {error:req.error};
+  return res.status(404).render('404', context);
+})
 // Listen
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
