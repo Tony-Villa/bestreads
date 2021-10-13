@@ -34,9 +34,12 @@
             </div>
             <textarea name="comment" id="" cols="30" rows="10" class="comment-section"></textarea>
           </div>
+
+          <% if (typeof user !== 'undefined') { %>
           <!-- Hidden paths -->
           <input type="hidden" name="book" value="<%= book._id %>" />
           <input type="hidden" name="user" value="<%= user._id %>" />
+          <% } %>
 
           </div>
           <div class="review-btn-container btn">
@@ -85,6 +88,7 @@
             </p>
           </div>
 
+          <% if (typeof user !== 'undefined') { %>
             <% if (user.id == review.user.id)  { %> 
               <div class="review-options-container">
                 <a href="/reviews/<%= review.id %>/edit"><button class="edit-btn btn">
@@ -100,9 +104,9 @@
               </div>
 
               <% } %> 
+              <% } %>
 
           <% }) %> 
-
         </section>
     </section>
   </main>
