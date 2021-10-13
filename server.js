@@ -33,7 +33,7 @@ app.use('/book', controllers.book);
 
 // ==404==
 app.get('/*', (req, res) => {
-  const context = {error:req.error};
+  const context = {error: req.error};
   return res.status(404).render('404', context);
 })
 // Listen

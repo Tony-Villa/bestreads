@@ -167,7 +167,7 @@ const teens = [
     title: "To Kill a Mockingbird" ,
     author: "Harper Lee",
     genre: "teens",
-    description: "" ,
+    description: "To Kill A Mockingbird takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos." ,
     coverImg: "https://images-na.ssl-images-amazon.com/images/I/51N5qVjuKAL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
   },
   {
@@ -181,7 +181,7 @@ const teens = [
     title: "Anne Frank: The Diary of a Young Girl" ,
     author: "Anne Frank",
     genre: "teens",
-    description: "in 1942, with the Nazis occupying Holland, a thirteen-year-old Jewish girl and her family fled their home in Amsterdam and went into hiding." ,
+    description: "In 1942, with the Nazis occupying Holland, a thirteen-year-old Jewish girl and her family fled their home in Amsterdam and went into hiding." ,
     coverImg: "https://images-na.ssl-images-amazon.com/images/I/51Vps1OxJPL._SX303_BO1,204,203,200_.jpg"
   },
   {
