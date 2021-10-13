@@ -34,9 +34,12 @@
             </div>
             <textarea name="comment" id="" cols="30" rows="10" class="comment-section"></textarea>
           </div>
+
+          <% if (typeof user !== 'undefined') { %>
           <!-- Hidden paths -->
           <input type="hidden" name="book" value="<%= book._id %>" />
           <input type="hidden" name="user" value="<%= user._id %>" />
+          <% } %>
 
           </div>
           <div class="review-btn-container btn">
@@ -57,16 +60,53 @@
       <% reviews.forEach(review => { %>
         
         <section class="review-card">
-          <h3 class="user-review-display">
-            <%= review.user.name %> 
-          </h3>
-  
-          <p class="review-comment-display">
-            <%= review.comment %> 
-          </p>
-  
-          <% }) %> 
+          <div class="review-user-info">
+            <h3 class="user-review-display">
+              <%= review.user.name %> 
+            </h3>
+            
+            <div class="star-rating">
 
+              <% for( let index = 0; index < 5; index++ ) { %> <% if
+              (review.rating > index) { %>
+                <span class="icon">
+                  <i class="fas fa-star yellow"></i>
+                </span>
+              <% } else { %>
+                    <span class="icon">
+                      <i class="fas fa-star"></i>
+                    </span>
+              <% } %> <% } %>
+            </div>
+                      
+            <p><%= new Date(review.createdAt).toLocaleString() %></p>
+          </div>
+          
+          <div class="display-review-content">
+            <p class="review-comment-display">
+              <%= review.comment %> 
+            </p>
+          </div>
+
+          <% if (typeof user !== 'undefined') { %>
+            <% if (user.id == review.user.id)  { %> 
+              <div class="review-options-container">
+                <a href="/reviews/<%= review.id %>/edit"><button class="edit-btn btn">
+                  Edit Review
+                </button></a> 
+                
+  
+                <form action="/reviews/<%= review.id %>?_method=DELETE" method="POST">
+                  <button class="delete-btn btn">
+                    Delete Review
+                  </button>                 
+              </form>
+              </div>
+
+              <% } %> 
+              <% } %>
+
+          <% }) %> 
         </section>
     </section>
   </main>

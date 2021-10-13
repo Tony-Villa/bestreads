@@ -176,4 +176,23 @@ font-family: 'Mulish', sans-serif;
   border: 1px solid black;
 }
 
+.review-options-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.review-user-info {
+  width: 45%;
+  display: flex;
+  margin: 5px;
+  border: 1px solid blue;
+  justify-content: space-between;
+}
+
+.display-review-content {
+  display: flex;
+  width: 100%;
+  margin-left: 3em;
+}
+
 /*# sourceMappingURL=styles.css.map */
