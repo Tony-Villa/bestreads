@@ -1,11 +1,16 @@
 <div class="quarter genres-card">
   <h4 class="browse-by-genre header-font">Browse by your favorite genre:</h4>
 
+  <% const availableGenres = ['Horror','Psychology','Young Adult','Non Fiction', 'kids', 'Science Fiction','All Genres']
+  %>
+
   <div class="genre-container">
-    <% genres.forEach(genre => { %>
-    <a href="/browse/<%= genre %> ">
+    <% availableGenres.forEach(genre => { %> <% if(genre !== 'All Genres') {%>
+    <a href="/browse?genre=<%= genre %> ">
       <button class="pills pill-btn content-font"><%= genre %></button>
     </a>
-    <% }) %>
+    <% } else { %>
+    <a href="/browse"> <button class="pills pill-btn content-font"><%= genre %></button></a>
+    <% } %> <% }) %>
   </div>
 </div>

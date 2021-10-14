@@ -9,9 +9,26 @@ const { truncate } = require('../functions/truncate');
 // Browse Route
 router.get('/', async (req, res) => {
   try {
-    const books = await Book.find({});
+    let queryObj = {};
 
-    const staffFavs = await Book.find({ isFeatured: true });
+    if (req.query.genre) {
+      queryObj = req.query;
+    }
+
+    const books = await Book.find(queryObj);
+
+    const findFav = (arr) => {
+      const featured = arr.map((el) => {
+        if (el.isFeatured) {
+          return el;
+        } else {
+          return;
+        }
+      });
+      return featured;
+    };
+
+    const staffFavs = books.filter((book) => book.isFeatured);
 
     let shuffledBooks = shuffle(books);
     let staffFav = randomizer(staffFavs);
@@ -33,6 +50,16 @@ router.get('/', async (req, res) => {
     res.render('browse/collection.ejs', context);
   } catch (error) {
     return console.log(error);
+  }
+});
+
+router.post('/search', async (req, res, next) => {
+  try {
+    const foundBook = await Book.findOne({ title: req.body.q });
+
+    res.redirect(`/browse/${foundBook._id}`);
+  } catch (err) {
+    console.log(err);
   }
 });
 
