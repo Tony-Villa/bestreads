@@ -97,6 +97,28 @@ font-family: 'Mulish', sans-serif;
   margin: 1rem;
 }
 
+.review-flex-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.review-card-with-book-cover {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.review-card {
+  flex-grow: 1;
+}
+
+.revie-book-thumb {
+  height: 8.5rem;
+  width: auto;
+}
+
 .read-review-container {
   margin-top: 1rem;
 }

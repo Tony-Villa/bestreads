@@ -1,41 +1,49 @@
 <section class="read-review-container">
   <% reviews.forEach(review => { %>
 
-  <section class="review-card">
-    <div class="review-user-info">
-      <div class="name-star-container">
-        <h3 class="user-review-display header-font"><%= review.user.name %></h3>
+  <div class="review-book-title header-font">
+    <h3>
+    <%= review.book.title %></div>
+    </h3>
+  <div class="review-card-with-book-cover">
+    <img class="revie-book-thumb" src="<%= review.book.coverImg %>" alt="" />
 
-        <div class="star-rating date">
-          <% for( let index = 0; index < 5; index++ ) { %> <% if (review.rating > index) { %>
-          <span class="icon">
-            <i class="fas fa-star yellow"></i>
-          </span>
-          <% } else { %>
-          <span class="icon">
-            <i class="fas fa-star"></i>
-          </span>
-          <% } %> <% } %>
+    <section class="review-card">
+      <div class="review-user-info">
+        <div class="name-star-container">
+          <h3 class="user-review-display header-font"><%= review.user.name %></h3>
+
+          <div class="star-rating date">
+            <% for( let index = 0; index < 5; index++ ) { %> <% if (review.rating > index) { %>
+            <span class="icon">
+              <i class="fas fa-star yellow"></i>
+            </span>
+            <% } else { %>
+            <span class="icon">
+              <i class="fas fa-star"></i>
+            </span>
+            <% } %> <% } %>
+          </div>
         </div>
+
+        <p class="content-font"><%= new Date(review.createdAt).toLocaleString() %></p>
       </div>
 
-      <p class="content-font"><%= new Date(review.createdAt).toLocaleString() %></p>
-    </div>
+      <div class="display-review-content">
+        <p class="review-comment-display content-font"><%= review.comment %></p>
+      </div>
 
-    <div class="display-review-content">
-      <p class="review-comment-display content-font"><%= review.comment %></p>
-    </div>
+      <% if (typeof user !== 'undefined') { %> <% if (user.id == review.user.id) { %>
+      <div class="review-options-container">
+        <a href="/reviews/<%= review.id %>/edit"><button class="edit-btn btn">Edit Review</button></a>
 
-    <% if (typeof user !== 'undefined') { %> <% if (user.id == review.user.id) { %>
-    <div class="review-options-container">
-      <a href="/reviews/<%= review.id %>/edit"><button class="edit-btn btn">Edit Review</button></a>
+        <form action="/reviews/<%= review.id %>?_method=DELETE" method="POST">
+          <button class="delete-btn btn">Delete Review</button>
+        </form>
+      </div>
 
-      <form action="/reviews/<%= review.id %>?_method=DELETE" method="POST">
-        <button class="delete-btn btn">Delete Review</button>
-      </form>
-    </div>
-
-    <% } %> <% } %>
-  </section>
+      <% } %> <% } %>
+    </section>
+  </div>
   <% }) %>
 </section>
