@@ -3,7 +3,7 @@
 <body>
   <%- include('../partials/nav.ejs') %>
   <main>
-    <section class="login-section">
+    <section class="login-container">
       <form action="/user/login" method="POST" autocomplete="off">
         <!-- Username Field -->
         <div class="field-container">
@@ -17,7 +17,7 @@
         <div class="field-container">
           <label class="label">Password:</label>
           <div class="input-container">
-            <input type="text" class="data-input" placeholder="******" name="password" />
+            <input type="password" class="data-input" placeholder="******" name="password" />
           </div>
         </div>
 

@@ -641,12 +641,13 @@ main {
   position: absolute;
   display: flex;
   justify-content: center;
-  top: -10;
+  top: -24rem;
   right: 0;
   border: 1px solid black;
-  height: 20rem;
+  height: 23rem;
   width: 15rem;
   border-radius: 1rem;
+  background-color: #f9f7f4;
 }
 
 .login-content {
@@ -661,6 +662,7 @@ label {
 .log-user-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .log-user-in {
