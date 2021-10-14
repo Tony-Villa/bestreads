@@ -9,45 +9,8 @@
   position: relative;
 }
 
-.login-section {
+.splash-log-module {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  top: -24rem;
+  top: -25rem;
   right: 0;
-  border: 1px solid black;
-  height: 23rem;
-  width: 15rem;
-  border-radius: 1rem;
-  background-color: $bg-color;
-}
-
-.login-content {
-  margin-top: 2em;
-}
-
-label {
-  font-family: $header-font;
-  font-size: 1.1rem;
-}
-
-.log-user-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.log-user-in {
-  margin: 0 auto;
-  margin-top: 1rem;
-}
-
-.register-user-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.register-user {
-  background-color: $main-color;
-  color: $button-color;
 }
