@@ -1,14 +1,61 @@
 <nav class="nav-bar" id="nav-container">
-  <section class="nav-logo-container">
-    <img src="../../assets/logos/logo-full.png" alt="bestreads logo" class="nav-logo" />
+  <div class="content-container">
+    <section class="nav-logo-container">
+      <a href="/">
+        <img src="../../assets/logos/logo-full.png" alt="bestreads logo" class="nav-logo" />
+      </a>
+
+    </section>
+
+    <!-- Nav Links -->
+    <section class="nav-links-container">
+      <ul class="nav-links">
+        <li class="nav-link content-font">
+          <a href="/browse">Browse</a>
+        </li>
+        <% if (typeof user !== 'undefined') { %>
+        <li class="nav-link content-font">
+          <a href="/user/mybooks">My Books</a>
+        </li>
+        <% } %> 
+      </ul>
+    </section>
+
+    <!-- <section class="search-bar-container"> -->
+    <form action="/search" class="search-form search-bar-container">
+      <input class="search-bar" type="text" placeholder="Search books" name="q" />
+      <!-- <input type="hidden" placeholder="Search books" name="qid" /> -->
+      <button type="submit" class="search-icon" aria-label="Search"><i class="fas fa-search"></i></button>
+    </form>
+    <!-- </section> -->
+
+    <section class="log-info">
+      <section class="user-info">
+        <% if (typeof user !== 'undefined') { %>
+        <section class="navbar-item content-font"><%= user.name %>
+      </section>
+    </section>
+    <section class="log-links">
+      <ul>
+        <li class="nav-link content-font"><a href="/user/logout">Logout</a></li>
+      </ul>
+    </section>
+    <% } else { %>
+    </section>
   </section>
-  <section class="search-bar-container">
-    <input type="text" />
-  </section>
-  <section class="nav-links-container">
-    <ul class="nav-links">
-      <li class="nav-link">Browse</li>
-      <li class="nav-link">My Books</li>
-    </ul>
-  </section>
+    <section class="log-in-register">
+      <section>
+        <ul>
+          <li class="nav-link content-font"><a href="/user/login">Log In</a></li>
+        </ul>
+      </section>
+      <section class="log-links">
+        <ul>
+          <li class="nav-link content-font"><a href="/user/register">Register</a></li>
+        </ul>
+      </section>
+    </section>
+
+    <% } %>
+  </div>
 </nav>

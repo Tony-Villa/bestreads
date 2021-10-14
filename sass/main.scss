@@ -8,12 +8,19 @@
 @import 'base/typography';
 
 // Components
+@import 'components/inputs';
+@import 'components/buttons';
+@import 'components/reviewcards';
 
 // Layout
 @import 'layout/nav';
 @import 'layout/createBook';
 
 // Pages
+@import 'pages/browse.scss';
+@import 'pages/show.scss';
+@import 'pages/splash.scss';
+@import 'pages/myBooks.scss';
 
 // Themes
 

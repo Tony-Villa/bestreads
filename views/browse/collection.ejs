@@ -3,22 +3,46 @@
 <body>
   <%- include('../partials/nav.ejs') %>
 
-  <main class="collection-content">
-    <section class="books-container">
-      <% for(let i = 0; i < books.length; i++){ %>
-      <!--  -->
-      <% const book = books[i] %>
-      <div class="book-card">
-        <div class="book-content">
-          <h3 class="browse-book-title">
-            <a href="/browse/<%= book.id %>"><%= book.title %></a>
-          </h3>
-        </div>
-        <figure class="book-thumb">
-          <img src="<%= book.coverImg %> " alt="<%= book.title %> cover image" />
-        </figure>
+  <main class="main-content">
+    <div class="browse-container">
+      <!-- staff pick -->
+      <div class="staff-pick">
+        <h2 class="featured-header header-font">Staff Pick:</h2>
+        <%- include('../partials/bookShowCard.ejs') %>
       </div>
-      <% } %>
-    </section>
+      <div class="bottom-content">
+        <div class="left-three-quarter">
+          <section class="books-container">
+            <% for(let i = 0; i < books.length; i++){ %>
+            <!--  -->
+            <% const book = books[i] %>
+            <div class="book-card">
+              <div class="book-content">
+                <h3 class="browse-book-title">
+                  <a href="/browse/<%= book.id %>"><%= book.title %></a>
+                </h3>
+              </div>
+              <figure class="book-thumb-container">
+                <a href="/browse/<%= book.id %>">
+                  <img class="book-thumb" src="<%= book.coverImg %> " alt="<%= book.title %> cover image" />
+                </a>
+              </figure>
+            </div>
+            <% } %>
+          </section>
+        </div>
+        <div class="right-quarter">
+          <h4 class="browse-by-genre header-font">Browse by your favorite genre:</h4>
+
+          <div class="genre-container">
+            <% genres.forEach(genre => { %>
+            <a href="/browse/<%= genre %> ">
+              <button class="pills pill-btn content-font"><%= genre %></button>
+            </a>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </body>

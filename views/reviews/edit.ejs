@@ -1,0 +1,47 @@
+<%- include('../partials/head.ejs', {page: 'Edit Review'}) %>
+
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+  <main>
+    <section class="edit-review-container">
+      <!--  NOTE: action will be the route, method will be the HTTP verb-->
+      <form action="/reviews/<%= review.id %>?_method=PUT" method="POST">
+        <div class="field">
+          <label class="label">Review Rating</label>
+          <div class="control">
+            <input
+              class="input"
+              type="number"
+              placeholder="review rating"
+              min="0"
+              max="5"
+              name="rating"
+              value="<%= review.rating %>"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Review Content</label>
+          <div class="control">
+            <input
+              class="large-data-input"
+              type="text"
+              placeholder="review comment"
+              name="comment"
+              value="<%= review.comment %> "
+            />
+          </div>
+        </div>
+
+        <div class="field btns-container">
+          <div class="control">
+            <a class="btn-link cancel-btn" href="/browse/ ">Cancel</a>
+            <button class="btn edit-btn" type="submit">Edit Review</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>

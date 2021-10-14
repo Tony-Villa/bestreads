@@ -1,0 +1,92 @@
+@use '../abstracts/' as *;
+@use '../base' as f;
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 15px;
+  display: flex;
+}
+
+.browse-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-header {
+  margin: 2rem 0;
+}
+
+.staff-pick {
+  margin-bottom: 1.5rem;
+}
+
+.bottom-content {
+  display: flex;
+}
+
+.left-three-quarter {
+  width: 70%;
+  display: flex;
+  padding: 10px;
+  //   border: 1px solid black;
+}
+
+.books-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .book-card {
+    padding: 15px;
+  }
+
+  .browse-book-title {
+    font-family: f.$title-font;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+.book-content {
+  width: 115px;
+}
+
+.browse-book-title {
+  font-size: 0.75em;
+  // font-size: get-font-size-level(3);
+}
+
+.book-thumb-container {
+  height: 180px;
+  width: 115px;
+
+  .book-thumb {
+    height: 180px;
+    width: 115px;
+  }
+}
+
+.right-quarter {
+  width: 25%;
+  margin-top: 2rem;
+  padding-left: 1rem;
+
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 3px 0px rgba(220, 219, 219, 0.6);
+  margin: 1rem;
+
+  height: fit-content;
+}
+
+.pills {
+  margin: 0.5rem;
+}
