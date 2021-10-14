@@ -4,44 +4,61 @@
   <%- include('../partials/nav.ejs') %>
 
   <main class="main-content-show-container">
-    <div class="flex-container-column"></div>
-    <section class="book-details-full">
-      <div class="show-book-cover">
-        <img src="<%= book.coverImg %> " alt="" />
-      </div>
-      <div class="show-book-headers">
-        <h2 class="show-book-title"><%= book.title %></h2>
-        <h4 class="show-book-author"><%= book.author %></h4>
-        <div class="genre-area">
-          <p class="show-genre">Genre: <%= book.genre %></p>
+
+   
+      <section class="book-details-full">
+        <div class="show-book-cover">
+          <img class="show-cover-image" src="<%= book.coverImg %> " alt="" />
+          <div class="avg-rating">
+            <%= bookAvgRating %> 
+          </div>
         </div>
-      </div>
-      <div class="show-book-description">
-        <p class="show-book-desc"><%= book.description %></p>
-      </div>
-    </section>
+        <div class="show-book-content">
+          <div class="show-book-headers">
+            <h2 class="show-book-title"><%= book.title %></h2>
+            <h4 class="show-book-author"><%= book.author %></h4>
+            <div class="genre-area">
+              <p class="show-genre">Genre: <%= book.genre %></p>
+            </div>
+          </div>
+          <div class="show-book-description">
+            <p class="show-book-desc"><%= book.description %></p>
+          </div>
+          <div class="show-book-buy">
+            <p class="buy-text">Support minority owned bookstores!</p>
+            <button class="buy-btn btn confirm">Buy Here</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- <hr class="line-break"> -->
+
 
     <section class="create-review-container">
       <div class="review-content">
+        <h2 class="review-title title-font center-title">Let others know what you think</h2>
         <form action="/reviews" method="POST">
-          <div class="rating-area">
-            <label for="rating" class="rating-label">Rating:</label>
-            <input class="input" type="number" name="rating" min="0" max="5" placeholder="0-5" />
+          <div class="rating-area sub-content-padding">
+            <label for="rating" class="rating-label header-font">Rating:</label>
+            <input class="input input-rating content-font" type="number" name="rating" min="0" max="5" placeholder="0-5" />
           </div>
-          <div class="text-area">
-            <div class="comment-section">
-              <label for="comment" class="comment-label">Comment:</label>
-            </div>
-            <textarea name="comment" id="" cols="30" rows="10" class="comment-section"></textarea>
+          <div class="text-area sub-content-padding">
+            <!-- <div class="comment-section">
+              <label for="comment" class="comment-label header-font">Comment:</label>
+            </div> -->
+            <textarea name="comment" id="" cols="30" rows="10" class="comment-section content-font" placeholder="Write your review here..."></textarea>
           </div>
+
+          <% if (typeof user !== 'undefined') { %>
           <!-- Hidden paths -->
           <input type="hidden" name="book" value="<%= book._id %>" />
           <input type="hidden" name="user" value="<%= user._id %>" />
+          <% } %>
 
           </div>
-          <div class="review-btn-container btn">
+          <div class="review-btn-container sub-content-padding">
             <% if (typeof user !== 'undefined') { %>
-            <button class="submit-comment">Submit Review</button>
+            <button class="submit-comment btn confirm ">Submit Review</button>
             <% } else { %>
             <p class="login-prompt">Please log in to leave a review</p>
             <a href="/user/login">Log In</a>
@@ -51,23 +68,11 @@
       </div>
     </section>
 
-    <section class="read-review-container">
-      <h2>What other readers thought:</h2>
-
-      <% reviews.forEach(review => { %>
-        
-        <section class="review-card">
-          <h3 class="user-review-display">
-            <%= review.user.name %> 
-          </h3>
-  
-          <p class="review-comment-display">
-            <%= review.comment %> 
-          </p>
-  
-          <% }) %> 
-
-        </section>
-    </section>
+    <% if(reviews.length > 0) { %>
+      <hr class="line-break">
+      <h2 class='title-font center-title review-title' >What other readers thought</h2>
+    
+      <%- include('../partials/reviewCard.ejs') %> 
+    <% } %> 
   </main>
 </body>

@@ -1,11 +1,52 @@
 <!-- HTML HEAD -->
 <%- include('./partials/head.ejs', {page: 'Home'}) %>
 
-<body>
-  <!-- Nav -->
-  <%- include('./partials/nav.ejs') %>
+<body class="not-logged-splash-body">
+  <!-- Not Logged Nav -->
+  <nav class="not-logged-nav-bar">
+    <div class="not-logged-content-container">
+      <section class="not-logged-nav-logo-container">
+        <a href="/">
+          <img src="../../assets/logos/logo-full.png" alt="bestreads logo" class="not-logged-nav-logo" />
+        </a>
+      </section>
+    </div>
+  </nav>
+  <div class="not-logged-splash-bg">
+    <img src="../assets/assets/splashCat.png" alt="" />
+  </div>
 
-  <main>
+  <main class="main-content-splash-not-logged">
+    <section class="login-section">
+      <div class="login-content">
+        <form action="/user/login" method="POST" autocomplete="off">
+          <!-- Username Field -->
+          <div class="field-container">
+            <label class="label">Name:</label>
+            <div class="input-container">
+              <input type="text" class="data-input" placeholder="Your Name" name="name" />
+            </div>
+          </div>
+
+          <!-- Password field -->
+          <div class="field-container">
+            <label class="label">Password:</label>
+            <div class="input-container">
+              <input type="text" class="data-input" placeholder="***********" name="password" />
+            </div>
+          </div>
+
+          <div class="log-user-container">
+            <button class="btn log-user-in confirm">Log In</button>
+          </div>
+        </form>
+        <div class="register-user-container">
+          <a href="/user/register">
+            <button class="btn register-user">Register</button>
+          </a>
+        </div>
+      </div>
+    </section>
     <p>Yo</p>
   </main>
 </body>

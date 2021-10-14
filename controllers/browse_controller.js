@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Book, Review, User } = require('../models');
 const { shuffle } = require('../functions/shuffle');
+const { getAverage } = require('../functions/getAverage');
 
 // Browse Route
 router.get('/', async (req, res) => {
@@ -23,15 +24,17 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res, next) => {
   try {
     const book = await Book.findById(req.params.id);
-    const loggedUser = await User.find({ user: req.session.currentUser.name });
     const reviews = await Review.find({ book: req.params.id }).populate('user');
 
-    console.log(loggedUser);
+    const ratings = await Review.find({ book: req.params.id });
+    const ratingsArr = ratings.map((el) => el.rating);
+
+    const bookAvgRating = getAverage(ratingsArr);
 
     const context = {
       book: book,
       reviews: reviews,
-      user: loggedUser[0],
+      bookAvgRating,
     };
 
     return res.render('browse/show.ejs', context);
