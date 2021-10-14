@@ -1,7 +1,9 @@
 <section class="book-details-full">
   <div class="show-book-cover">
     <img class="show-cover-image" src="<%= book.coverImg %> " alt="" />
+    <% if(bookAvgRating) { %>
     <div class="avg-rating"><%= bookAvgRating %></div>
+    <% } %>
   </div>
   <div class="show-book-content">
     <div class="show-book-headers">
