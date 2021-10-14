@@ -780,4 +780,9 @@ main {
   text-align: center;
 }
 
+.splash-cat {
+  position: relative;
+  left: -4.8rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
