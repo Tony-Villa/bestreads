@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+@use '../base' as f;
+
+.btn {
+  padding: 0.57rem;
+  width: 7.75rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-family: $header-font;
+  font-size: 1rem;
+}
+
+.confirm {
+  background-color: $button-color;
+  color: $main-color;
+
+  &:hover {
+    background-color: $light-button-color;
+  }
+}

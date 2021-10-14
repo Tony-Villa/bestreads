@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
     name: user.name,
   };
 
-  console.log(req.session.currentUser.id);
+  console.log(req.session.currentUser);
 
   return res.redirect('/');
 });

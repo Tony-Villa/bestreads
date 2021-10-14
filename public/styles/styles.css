@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla:ital@1&family=Mulish:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla:ital@1&family=Mulish:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla:ital@1&family=Mulish:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla:ital@1&family=Mulish:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +19,34 @@ font-family: 'Hind Madurai', sans-serif;
 font-family: 'Karla', sans-serif;
 font-family: 'Mulish', sans-serif;
 */
+input {
+  height: 2rem;
+  padding: 0.25rem;
+}
+
+/*
+font-family: 'Hind Madurai', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Mulish', sans-serif;
+*/
+.btn {
+  padding: 0.57rem;
+  width: 7.75rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-size: 1rem;
+}
+
+.confirm {
+  background-color: #331b09;
+  color: #f4f1ea;
+}
+.confirm:hover {
+  background-color: #664329;
+}
+
 #nav-container {
   background-color: #f4f1ea;
   height: 50px;
@@ -98,6 +128,27 @@ font-family: 'Mulish', sans-serif;
 a {
   text-decoration: none;
   color: #564132;
+}
+
+.not-logged-nav-bar {
+  background-color: #f4f1ea;
+  height: 5.3em;
+}
+
+.not-logged-content-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1220px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.not-logged-nav-logo-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .longer-data-input {
@@ -193,6 +244,61 @@ font-family: 'Mulish', sans-serif;
   display: flex;
   width: 100%;
   margin-left: 3em;
+}
+
+/*
+font-family: 'Hind Madurai', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Mulish', sans-serif;
+*/
+.not-logged-splash-body {
+  overflow: hidden;
+}
+
+.main-content-splash-not-logged {
+  position: relative;
+}
+
+.login-section {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -10;
+  right: 0;
+  border: 1px solid black;
+  height: 20rem;
+  width: 15rem;
+  border-radius: 1rem;
+}
+
+.login-content {
+  margin-top: 2em;
+}
+
+label {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.1rem;
+}
+
+.log-user-container {
+  display: flex;
+  justify-content: center;
+}
+
+.log-user-in {
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.register-user-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.register-user {
+  background-color: #f4f1ea;
+  color: #331b09;
 }
 
 /*# sourceMappingURL=styles.css.map */
