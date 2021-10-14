@@ -16,6 +16,10 @@ main {
   padding-bottom: 3rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .title-font {
   font-family: "Karla", sans-serif;
 }
@@ -56,6 +60,23 @@ font-family: 'Hind Madurai', sans-serif;
 font-family: 'Karla', sans-serif;
 font-family: 'Mulish', sans-serif;
 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
 .btn {
   padding: 0.57rem;
   width: 7.75rem;
@@ -98,9 +119,20 @@ font-family: 'Mulish', sans-serif;
   background-color: #f4f1ea;
   text-align: center;
   border: 1px solid #564132;
+  cursor: pointer;
 }
 .pill-btn:hover {
   background-color: #f9f7f4;
+}
+
+.link-lookalike {
+  background-color: transparent;
+  color: #564132;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 1rem;
 }
 
 .review-card {
@@ -300,6 +332,23 @@ font-family: 'Hind Madurai', sans-serif;
 font-family: 'Karla', sans-serif;
 font-family: 'Mulish', sans-serif;
 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
 .main-content {
   max-width: 900px;
   margin: 0 auto;
@@ -399,6 +448,23 @@ font-family: 'Hind Madurai', sans-serif;
 font-family: 'Karla', sans-serif;
 font-family: 'Mulish', sans-serif;
 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
 body {
   background-color: #f9f7f4;
 }
@@ -546,6 +612,23 @@ font-family: 'Hind Madurai', sans-serif;
 font-family: 'Karla', sans-serif;
 font-family: 'Mulish', sans-serif;
 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
 .not-logged-splash-body {
   overflow: hidden;
 }
