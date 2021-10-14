@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 
     if (req.session.currentUser) {
       const context = {
-        user: req.session.currentUser.name,
+        user: req.session.currentUser,
         books,
         bookAvgRating: '',
       };

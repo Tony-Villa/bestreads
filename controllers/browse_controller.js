@@ -55,6 +55,12 @@ router.get('/', async (req, res) => {
 
 router.post('/search', async (req, res, next) => {
   try {
+    const allBooks = await Book.find({});
+
+    // const filteredBooks = allBooks.filter((book) => {
+    //   book.title.toLowerCase().includes(req.body.q.toLowerCase());
+    // });
+
     const foundBook = await Book.findOne({ title: req.body.q });
 
     res.redirect(`/browse/${foundBook._id}`);
