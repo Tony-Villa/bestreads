@@ -1,0 +1,22 @@
+<section class="book-details-full">
+  <div class="show-book-cover">
+    <img class="show-cover-image" src="<%= book.coverImg %> " alt="" />
+    <div class="avg-rating"><%= bookAvgRating %></div>
+  </div>
+  <div class="show-book-content">
+    <div class="show-book-headers">
+      <h2 class="show-book-title"><%= book.title %></h2>
+      <h4 class="show-book-author"><%= book.author %></h4>
+      <div class="genre-area">
+        <p class="show-genre">Genre: <%= book.genre %></p>
+      </div>
+    </div>
+    <div class="show-book-description">
+      <p class="show-book-desc"><%= book.description %></p>
+    </div>
+    <div class="show-book-buy">
+      <p class="buy-text">Support minority owned bookstores!</p>
+      <button class="buy-btn btn confirm">Buy Here</button>
+    </div>
+  </div>
+</section>
