@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla:ital@1&family=Mulish:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla&family=Mulish:wght@600&display=swap');
 
 $title-font: 'Karla', sans-serif;
 $header-font: 'Mulish', sans-serif;
 $content-font: 'Hind Madurai', sans-serif;
+
+.title-font {
+  font-family: $title-font;
+}
+
+.header-font {
+  font-family: $header-font;
+}
+
+.content-font {
+  font-family: $content-font;
+}
 
 /*
 font-family: 'Hind Madurai', sans-serif;
