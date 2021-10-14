@@ -51,6 +51,7 @@ app.use('/', controllers.landing);
 app.use('/browse', controllers.browse);
 app.use('/book', controllers.book);
 app.use('/user', controllers.user);
+app.use('/reviews', controllers.review);
 
 // Routes
 
