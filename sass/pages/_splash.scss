@@ -1,0 +1,51 @@
+@use '../abstracts/' as *;
+@use '../base' as f;
+
+.not-logged-splash-body {
+  overflow: hidden;
+}
+
+.main-content-splash-not-logged {
+  position: relative;
+}
+
+.login-section {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -10;
+  right: 0;
+  border: 1px solid black;
+  height: 20rem;
+  width: 15rem;
+  border-radius: 1rem;
+}
+
+.login-content {
+  margin-top: 2em;
+}
+
+label {
+  font-family: $header-font;
+  font-size: 1.1rem;
+}
+
+.log-user-container {
+  display: flex;
+  justify-content: center;
+}
+.log-user-in {
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.register-user-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.register-user {
+  background-color: $main-color;
+  color: $button-color;
+}

@@ -1,0 +1,132 @@
+@use '../abstracts/' as *;
+@use '../base' as f;
+
+body {
+  background-color: $bg-color;
+}
+
+.main-content-show-container {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+
+.show-book-cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-details-full {
+  display: flex;
+  border: 1px solid $main-color;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 3px 0px rgba(220, 219, 219, 0.6);
+}
+
+.show-cover-image {
+  height: 20rem;
+  width: auto;
+}
+
+.avg-rating {
+  margin-top: 0.5rem;
+  font-family: $header-font;
+}
+
+.yellow {
+  color: rgb(240, 206, 17);
+}
+
+.show-book-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem 1.75rem;
+}
+
+.show-book-title {
+  margin-bottom: 1rem;
+  font-family: $title-font;
+  font-size: 2rem;
+}
+
+.show-book-author {
+  margin-bottom: 0.5rem;
+  font-family: $title-font;
+  font-size: 1.5rem;
+}
+
+.show-genre {
+  font-family: $header-font;
+  margin-bottom: 2rem;
+}
+
+.show-book-desc {
+  font-family: $content-font;
+  line-height: 1.75rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.show-book-buy {
+  align-self: flex-end;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.buy-text {
+  margin-right: 1rem;
+  font-family: $header-font;
+}
+.create-review-container {
+  margin-top: 2rem;
+}
+
+.sub-content-padding {
+  padding: 0 2rem;
+}
+
+.input-rating {
+  border: 1px solid $main-color;
+}
+
+.rating-area {
+  margin-top: 1rem;
+}
+
+.comment-section {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  border-radius: 0.25rem;
+
+  &:focus {
+    outline: 1px solid $text-color;
+  }
+}
+
+.submit-comment {
+  width: 9.5rem;
+}
+
+.line-break {
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.center-title {
+  text-align: center;
+}
+
+.user-review-display {
+  margin-right: 1rem;
+}

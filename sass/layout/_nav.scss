@@ -58,4 +58,50 @@
 
 .nav-link {
   list-style-type: none;
+  color: $text-color;
+}
+
+.log-info {
+  width: 12%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.log-in-register {
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-info {
+  color: $text-color;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+// NOT LOGGED NAV
+.not-logged-nav-bar {
+  background-color: $main-color;
+  height: 5.3em;
+  // box-shadow: 0 4px 1px -2px #e6e6e6;
+}
+
+.not-logged-content-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1220px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.not-logged-nav-logo-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }

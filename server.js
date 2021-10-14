@@ -41,6 +41,14 @@ app.use(function (req, res, next) {
   next();
 });
 
+const authRequired = function (req, res, next) {
+  if (req.session.currentUser) {
+    return next();
+  }
+
+  return res.redirect('/login');
+};
+
 // Connect to DB
 require('./config/db.connection');
 
@@ -51,6 +59,7 @@ app.use('/', controllers.landing);
 app.use('/browse', controllers.browse);
 app.use('/book', controllers.book);
 app.use('/user', controllers.user);
+app.use('/reviews', authRequired, controllers.review);
 
 // Routes
 

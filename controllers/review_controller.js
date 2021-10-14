@@ -1,28 +1,34 @@
 const router = require('express').Router();
 const { Book, Review, User } = require('../models');
 
-router.get('/', async (req, res) => {
-  try {
-    const allBooks = await Book.find({});
-    const allReviews = await Review.find({});
-    const allUsers = await User.find({});
+// router.get('/', async (req, res) => {
+//   try {
+//     const allBooks = await Book.find({});
+//     const allReviews = await Review.find({});
+//     const allUsers = await User.find({});
 
-    const context = {
-      users: allUsers,
-      reviews: allReviews,
-      books: allBooks,
-    };
+//     const context = {
+//       users: allUsers,
+//       reviews: allReviews,
+//       books: allBooks,
+//     };
 
-    res.send(allReviews);
-  } catch (err) {
-    console.log(err);
-  }
-});
+//     res.send(allReviews);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
 
 // create route
 router.post('/', async (req, res, next) => {
   try {
-    await Review.create(req.body);
+    const review = {
+      ...req.body,
+      user: req.session.currentUser.id,
+    };
+
+    await Review.create(review);
+
     return res.redirect('back');
   } catch (err) {
     console.log(err);
@@ -38,6 +44,43 @@ router.get('/:reviewId/edit', async (req, res) => {
     return res.render('reviews/edit.ejs', { review: review });
   } catch {
     if (error) return console.log(error);
+  }
+});
+
+// update controller
+router.put('/:reviewId', async (req, res) => {
+  try {
+    const review = await Review.findById(req.params.reviewId);
+
+    const bookid = review.book;
+
+    await Review.findByIdAndUpdate(
+      req.params.reviewId,
+      {
+        $set: req.body,
+      },
+      {
+        new: true,
+      }
+    );
+
+    console.log(req.body);
+
+    return res.redirect(`/browse/${bookid}`);
+  } catch (error) {
+    return console.log(error);
+  }
+});
+
+// delete controller
+router.delete('/:id', async (req, res, next) => {
+  try {
+    await Review.findByIdAndDelete(req.params.id);
+    return res.redirect('back');
+  } catch (error) {
+    console.log(error);
+    req.error = error;
+    return next();
   }
 });
 
