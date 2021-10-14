@@ -25,13 +25,6 @@
   display: flex;
 }
 
-.left-three-quarter {
-  width: 70%;
-  display: flex;
-  padding: 10px;
-  //   border: 1px solid black;
-}
-
 .books-container {
   display: flex;
   justify-content: space-between;
@@ -71,20 +64,6 @@
     height: 180px;
     width: 115px;
   }
-}
-
-.right-quarter {
-  width: 25%;
-  margin-top: 2rem;
-  padding-left: 1rem;
-
-  padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0px 1px 3px 0px rgba(220, 219, 219, 0.6);
-  margin: 1rem;
-
-  height: fit-content;
 }
 
 .pills {

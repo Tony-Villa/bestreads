@@ -2,7 +2,7 @@
 @use '../base' as f;
 
 .not-logged-splash-body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .main-content-splash-not-logged {
@@ -11,6 +11,15 @@
 
 .splash-log-module {
   position: absolute;
-  top: -25rem;
+  top: -25.5rem;
   right: 0;
+}
+
+.bottom-feature {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.welcome-not-logged {
+  text-align: center;
 }

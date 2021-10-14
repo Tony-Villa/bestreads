@@ -1,5 +1,5 @@
 <!-- HTML HEAD -->
-<%- include('./partials/head.ejs', {page: 'Home'}) %>
+<%- include('./partials/head.ejs', {page: 'Home', script: 'collection'}) %>
 
 <body class="not-logged-splash-body">
   <!-- Not Logged Nav -->
@@ -21,6 +21,15 @@
       <!-- Login -->
       <%- include('./partials/loginComponent.ejs') %>
     </section>
-    <p>Yo</p>
+
+    <hr class="line-break" />
+
+    <div class="welcome-not-logged header-font">
+      <h1>Find your new favorite book:</h1>
+    </div>
+    <section class="bottom-feature">
+      <!--  -->
+      <%- include('./partials/bookShowCard.ejs') %>
+    </section>
   </main>
 </body>

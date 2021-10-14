@@ -43,6 +43,10 @@ font-family: 'Hind Madurai', sans-serif;
 font-family: 'Karla', sans-serif;
 font-family: 'Mulish', sans-serif;
 */
+.flex {
+  display: flex;
+}
+
 input {
   height: 2rem;
   padding: 0.25rem;
@@ -307,6 +311,15 @@ main {
   margin: auto auto;
 }
 
+.genres-card {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 3px 0px rgba(220, 219, 219, 0.6);
+  margin: 1rem;
+  height: fit-content;
+}
+
 #nav-container {
   background-color: #f4f1ea;
   height: 50px;
@@ -418,6 +431,21 @@ a {
   padding: 5px;
 }
 
+.three-quarter {
+  width: 70%;
+  padding: 10px;
+}
+
+.quarter {
+  width: 25%;
+  margin-top: 2rem;
+  padding-left: 1rem;
+}
+
+.half {
+  width: 50%;
+}
+
 .title-font {
   font-family: "Karla", sans-serif;
 }
@@ -481,12 +509,6 @@ main {
   display: flex;
 }
 
-.left-three-quarter {
-  width: 70%;
-  display: flex;
-  padding: 10px;
-}
-
 .books-container {
   display: flex;
   justify-content: space-between;
@@ -521,18 +543,6 @@ main {
 .book-thumb-container .book-thumb {
   height: 180px;
   width: 115px;
-}
-
-.right-quarter {
-  width: 25%;
-  margin-top: 2rem;
-  padding-left: 1rem;
-  padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0px 1px 3px 0px rgba(220, 219, 219, 0.6);
-  margin: 1rem;
-  height: fit-content;
 }
 
 .pills {
@@ -748,7 +758,7 @@ main {
 }
 
 .not-logged-splash-body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .main-content-splash-not-logged {
@@ -757,8 +767,17 @@ main {
 
 .splash-log-module {
   position: absolute;
-  top: -25rem;
+  top: -25.5rem;
   right: 0;
+}
+
+.bottom-feature {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.welcome-not-logged {
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
