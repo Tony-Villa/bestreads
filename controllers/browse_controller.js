@@ -2,16 +2,25 @@ const router = require('express').Router();
 const { Book, Review, User } = require('../models');
 const { shuffle } = require('../functions/shuffle');
 const { getAverage } = require('../functions/getAverage');
+const { randomizer } = require('../functions/randomizer');
+const { findGenre } = require('../functions/findGenre');
 
 // Browse Route
 router.get('/', async (req, res) => {
   try {
     const books = await Book.find({});
 
+    const staffFavs = await Book.find({ isFeatured: true });
+
     let shuffledBooks = shuffle(books);
+    let staffFav = randomizer(staffFavs);
+    let genres = findGenre(books);
 
     const context = {
       books: shuffledBooks,
+      book: staffFav,
+      bookAvgRating: '',
+      genres,
     };
 
     res.render('browse/collection.ejs', context);

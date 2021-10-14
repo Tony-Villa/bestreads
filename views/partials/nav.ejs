@@ -10,11 +10,11 @@
     <!-- Nav Links -->
     <section class="nav-links-container">
       <ul class="nav-links">
-        <li class="nav-link">
+        <li class="nav-link content-font">
           <a href="/browse">Browse</a>
         </li>
         <% if (typeof user !== 'undefined') { %>
-        <li class="nav-link">
+        <li class="nav-link content-font">
           <a href="/user/mybooks">My Books</a>
         </li>
         <% } %> 
@@ -32,12 +32,12 @@
     <section class="log-info">
       <section class="user-info">
         <% if (typeof user !== 'undefined') { %>
-        <section class="navbar-item"><%= user.name %>
+        <section class="navbar-item content-font"><%= user.name %>
       </section>
     </section>
     <section class="log-links">
       <ul>
-        <li class="nav-link"><a href="/user/logout">Logout</a></li>
+        <li class="nav-link content-font"><a href="/user/logout">Logout</a></li>
       </ul>
     </section>
     <% } else { %>
@@ -46,12 +46,12 @@
     <section class="log-in-register">
       <section>
         <ul>
-          <li class="nav-link"><a href="/user/login">Log In</a></li>
+          <li class="nav-link content-font"><a href="/user/login">Log In</a></li>
         </ul>
       </section>
       <section class="log-links">
         <ul>
-          <li class="nav-link"><a href="/user/register">Register</a></li>
+          <li class="nav-link content-font"><a href="/user/register">Register</a></li>
         </ul>
       </section>
     </section>
