@@ -9,7 +9,7 @@
   <div class="show-book-content">
     <div class="show-book-headers">
       <h2 class="show-book-title">
-        <a href="/browse/<%= book.id %> "><%= book.title %></a>
+        <a class="get-book-title" href="/browse/<%= book.id %> "><%= book.title %></a>
       </h2>
       <h4 class="show-book-author"><%= book.author %></h4>
       <div class="genre-area">
@@ -30,7 +30,7 @@
     </div>
     <div class="show-book-buy">
       <p class="buy-text">Support minority owned bookstores!</p>
-      <button class="buy-btn btn confirm">Buy Here</button>
+      <a href="" target="_blank" class="buy-confirm-link"><button class="buy-btn btn confirm">Buy Here</button></a>
     </div>
   </div>
 </section>
