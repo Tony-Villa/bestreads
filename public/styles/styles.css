@@ -154,6 +154,11 @@ main {
   font-size: 1rem;
 }
 
+.cancel-btn,
+.edit-btn {
+  border: 1px solid #564132;
+}
+
 .review-card {
   padding: 1.5rem;
   background-color: #fff;
@@ -1048,6 +1053,25 @@ main {
 .large-data-input {
   width: 50rem;
   height: 10rem;
+  font-size: 1.25rem;
+}
+
+.edit-form {
+  padding: 1rem;
+}
+
+.edit-btns-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.edit-margin-left {
+  margin-left: 0.5rem;
+}
+
+.rating-edit-page {
+  margin-bottom: 0.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

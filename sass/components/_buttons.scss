@@ -61,3 +61,8 @@
   font-family: $content-font;
   font-size: 1rem;
 }
+
+.cancel-btn,
+.edit-btn {
+  border: 1px solid $text-color;
+}
