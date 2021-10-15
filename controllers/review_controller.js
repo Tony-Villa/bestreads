@@ -31,7 +31,7 @@ router.post('/', async (req, res, next) => {
 
     return res.redirect('back');
   } catch (err) {
-    console.log(err);
+    res.status(400).send(err.message);
     return next();
   }
 });

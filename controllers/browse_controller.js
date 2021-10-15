@@ -88,6 +88,7 @@ router.post('/search', async (req, res, next) => {
     // res.render('/browse/searchResults.ejs', context);
   } catch (err) {
     console.log(err);
+    return next();
   }
 });
 
