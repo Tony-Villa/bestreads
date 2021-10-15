@@ -37,4 +37,8 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/lol', async (req, res) => {
+  res.render('lol.ejs');
+});
+
 module.exports = router;

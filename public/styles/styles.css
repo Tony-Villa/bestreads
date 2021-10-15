@@ -1012,4 +1012,23 @@ main {
   border-top-right-radius: 1rem;
 }
 
+.neg-margin {
+  margin-top: -2rem;
+}
+
+.center-content {
+  height: 80vh;
+}
+
+.center-text {
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.lol-text {
+  font-size: 5rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
