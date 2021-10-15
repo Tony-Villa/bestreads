@@ -22,7 +22,8 @@
 }
 /* Accordion styles */
 .tabs {
-  border-radius: 8px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   overflow: hidden;
   box-shadow: 0px 1px 3px 0px rgba(220, 219, 219, 0.6);
 }
