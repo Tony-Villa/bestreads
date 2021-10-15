@@ -14,6 +14,8 @@ router.post('/register', async (req, res) => {
   const { error } = registerValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
+  // res.render('user/register.ejs', { error });
+
   // Check if user is already in DB
   const emailExists = await User.findOne({ email: req.body.email });
   if (emailExists) return res.status(400).send('Email already exists');
@@ -39,7 +41,7 @@ router.post('/register', async (req, res) => {
 
 //Login
 router.get('/login', (req, res) => {
-  res.render('user/userLogin.ejs');
+  res.render('user/login.ejs');
 });
 
 router.post('/login', async (req, res) => {
