@@ -2,10 +2,11 @@
   <% reviews.forEach(review => { %>
 
   <div class="review-book-title header-font">
-    <h3>
-    <%= review.book.title %></div>
-    </h3>
-  <div class="review-card-with-book-cover">
+    <a href="/browse/<%= review.book.id %>">
+      <h3><%= review.book.title %></h3>
+    </a>
+  </div>
+  <div class="review-card-with-book-cover flex">
     <a href="/browse/<%= review.book.id %> ">
       <img class="revie-book-thumb" src="<%= review.book.coverImg %>" alt="" />
     </a>
@@ -37,7 +38,9 @@
 
       <% if (typeof user !== 'undefined') { %> <% if (user.id == review.user.id) { %>
       <div class="review-options-container">
-        <a href="/reviews/<%= review.id %>/edit"><button class="icon-btn btn"><i class="far fa-edit"></i></button></a>
+        <a href="/reviews/<%= review.id %>/edit"
+          ><button class="icon-btn btn"><i class="far fa-edit"></i></button
+        ></a>
 
         <form action="/reviews/<%= review.id %>?_method=DELETE" method="POST">
           <button class="icon-btn delete-btn btn"><i class="far fa-trash-alt"></i></button>
