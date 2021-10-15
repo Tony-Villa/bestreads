@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
     const context = {
       user: req.session.currentUser.name,
     };
-    // console.log(user.name);
+     //console.log('req sess.:',req.session.currentUser.name);
     return res.render('loggedIndex.ejs', context);
   } else {
     res.render('index.ejs');

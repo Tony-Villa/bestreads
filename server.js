@@ -13,10 +13,12 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname));
 // Print dir name
 console.log('this dirname:',__dirname);
+
+
+
 // URL Parser Middleware && Method Overide
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-
 /* SECTION External modules */
 const session = require('express-session');
 const MongoStore = require('connect-mongo');

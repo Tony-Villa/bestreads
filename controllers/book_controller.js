@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res, next) => {
   try {
-    console.log(req.body);
+    console.log("Book body:", req.body);
     await Book.create(req.body);
     return res.redirect('/book');
   } catch (err) {
