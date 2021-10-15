@@ -4,6 +4,7 @@
   <%- include('../partials/nav.ejs') %>
 
   <main>
+
     <section class="edit-review-container">
       <!--  NOTE: action will be the route, method will be the HTTP verb-->
       <form action="/reviews/<%= review.id %>?_method=PUT" method="POST">
@@ -23,15 +24,18 @@
         </div>
 
         <div class="field">
-          <label class="label">Review Content</label>
-          <div class="control">
-            <input
+          <div>
+
+            <label class="label">Review Content</label>
+          </div>
+            <textarea
               class="large-data-input"
               type="text"
+              cols="40"
+              rows="5"
               placeholder="review comment"
               name="comment"
-              value="<%= review.comment %> "
-            />
+            ><%= review.comment %></textarea>
           </div>
         </div>
 
