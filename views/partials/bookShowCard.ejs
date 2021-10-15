@@ -2,8 +2,10 @@
   <div class="show-book-cover">
     <a href="/browse/<%= book.id %>"><img class="show-cover-image" src="<%= book.coverImg %> " alt="" /></a>
 
-    <% if(bookAvgRating) { %>
-    <div class="avg-rating"><%= bookAvgRating %></div>
+    <% if(bookAvgRating !== '') { %>
+    <div class="avg-rating">
+      <h3>Avg Rating: <%= bookAvgRating %></h3>
+    </div>
     <% } %>
   </div>
   <div class="show-book-content">

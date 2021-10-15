@@ -1,0 +1,122 @@
+@use '../abstracts/' as *;
+@use '../base' as f;
+
+// General
+
+.accordion-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+// Layout
+.row {
+  display: flex;
+  .col {
+    position: relative;
+    flex: 1;
+    &:last-child {
+      margin-left: 1em;
+    }
+  }
+}
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px 0px rgba(220, 219, 219, 0.6);
+}
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: $text-color;
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+    &:hover {
+      background: darken($text-color, 10%);
+    }
+    &::after {
+      content: '\276F';
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all 0.35s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: $text-color;
+    background: white;
+    transition: all 0.35s;
+  }
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: $text-color;
+    cursor: pointer;
+    &:hover {
+      background: darken($text-color, 10%);
+    }
+  }
+}
+
+// :checked
+input:checked {
+  + .tab-label {
+    background: darken($text-color, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+}
+
+.club-img {
+  height: auto;
+  width: 550px;
+}
+
+.club-content {
+  position: absolute;
+}
+
+.club-text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.horror-club {
+  top: 3.5rem;
+  right: 3rem;
+}
+
+.ya-club {
+  top: 3.5rem;
+  left: 3rem;
+}
+
+.ya-text,
+.kids-text {
+  color: $main-color;
+}
+
+.kids-club {
+  top: 3.5rem;
+  left: 3rem;
+}

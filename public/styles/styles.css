@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla&family=Mulish:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla&family=Mulish:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla&family=Mulish:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Karla&family=Mulish:wght@600&display=swap");
@@ -318,6 +320,162 @@ main {
   box-shadow: 0px 1px 3px 0px rgba(220, 219, 219, 0.6);
   margin: 1rem;
   height: fit-content;
+  margin-top: 2rem;
+}
+
+.title-font {
+  font-family: "Karla", sans-serif;
+}
+
+.header-font {
+  font-family: "Mulish", sans-serif;
+}
+
+.content-font {
+  font-family: "Hind Madurai", sans-serif;
+}
+
+label {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.1rem;
+}
+
+/*
+font-family: 'Hind Madurai', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Mulish', sans-serif;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.accordion-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.row {
+  display: flex;
+}
+.row .col {
+  position: relative;
+  flex: 1;
+}
+.row .col:last-child {
+  margin-left: 1em;
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px 0px rgba(220, 219, 219, 0.6);
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #564132;
+  font-weight: bold;
+  cursor: pointer;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #36291f;
+}
+.tab-label::after {
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #564132;
+  background: white;
+  transition: all 0.35s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #564132;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #36291f;
+}
+
+input:checked + .tab-label {
+  background: #36291f;
+}
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.club-img {
+  height: auto;
+  width: 550px;
+}
+
+.club-content {
+  position: absolute;
+}
+
+.club-text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.horror-club {
+  top: 3.5rem;
+  right: 3rem;
+}
+
+.ya-club {
+  top: 3.5rem;
+  left: 3rem;
+}
+
+.ya-text,
+.kids-text {
+  color: #f4f1ea;
+}
+
+.kids-club {
+  top: 3.5rem;
+  left: 3rem;
 }
 
 #nav-container {
@@ -437,8 +595,7 @@ a {
 }
 
 .quarter {
-  width: 25%;
-  margin-top: 2rem;
+  width: 30%;
   padding-left: 1rem;
 }
 
@@ -783,6 +940,17 @@ main {
 .splash-cat {
   position: relative;
   left: -4.8rem;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /*# sourceMappingURL=styles.css.map */
