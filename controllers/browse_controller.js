@@ -108,7 +108,7 @@ router.get('/:id', async (req, res, next) => {
 
     const context = {
       book: book,
-      reviews: reviews,
+      reviews: reviews.reverse(),
       bookAvgRating,
       fullBookDesc,
       abridgedBookDesc,
