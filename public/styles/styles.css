@@ -324,6 +324,10 @@ main {
   margin-top: 2rem;
 }
 
+.review-card-with-book-cover {
+  flex-wrap: nowrap;
+}
+
 .title-font {
   font-family: "Karla", sans-serif;
 }
