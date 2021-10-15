@@ -1,11 +1,23 @@
 <!-- HTML HEAD -->
 <%- include('./partials/head.ejs', {page: 'Welcome'}) %>
 
-<body>
+<body class="hide-scrollbar">
   <!-- Nav -->
-  <%- include('./partials/nav.ejs') %>
+  <%- include('./partials/nav.ejs', {user}) %>
 
   <main>
-    <p>Yo <%= user %></p>
+    <h1 class="header-font">Welcome back, <%= user.name %>!</h1>
+    <section class="main-content flex">
+      <div class="img-accordian col">
+        <div class="welcome-img-container flex">
+          <img class="welcome-img" src="/assets/assets/welcomeImg.png" alt="" />
+          <div class="welcome-img-text">
+            <h2 class="header-font">Join one of our site wide Book Clubs!</h2>
+          </div>
+        </div>
+        <div class="three-quarter flex"><%- include('./partials/clubAccordion.ejs') %></div>
+      </div>
+      <div class="quarter"><%- include('./partials/genreCard.ejs') %></div>
+    </section>
   </main>
 </body>

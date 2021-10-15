@@ -2,50 +2,29 @@
 @use '../base' as f;
 
 .not-logged-splash-body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .main-content-splash-not-logged {
   position: relative;
 }
 
-.login-section {
+.splash-log-module {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  top: -10;
+  top: -25.5rem;
   right: 0;
-  border: 1px solid black;
-  height: 20rem;
-  width: 15rem;
-  border-radius: 1rem;
 }
 
-.login-content {
-  margin-top: 2em;
+.bottom-feature {
+  width: 100%;
+  margin-top: 1.5rem;
 }
 
-label {
-  font-family: $header-font;
-  font-size: 1.1rem;
+.welcome-not-logged {
+  text-align: center;
 }
 
-.log-user-container {
-  display: flex;
-  justify-content: center;
-}
-.log-user-in {
-  margin: 0 auto;
-  margin-top: 1rem;
-}
-
-.register-user-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.register-user {
-  background-color: $main-color;
-  color: $button-color;
+.splash-cat {
+  position: relative;
+  left: -4.8rem;
 }

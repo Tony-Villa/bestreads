@@ -16,6 +16,11 @@ $content-font: 'Hind Madurai', sans-serif;
   font-family: $content-font;
 }
 
+label {
+  font-family: $header-font;
+  font-size: 1.1rem;
+}
+
 /*
 font-family: 'Hind Madurai', sans-serif;
 font-family: 'Karla', sans-serif;

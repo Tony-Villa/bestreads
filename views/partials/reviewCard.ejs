@@ -6,7 +6,9 @@
     <%= review.book.title %></div>
     </h3>
   <div class="review-card-with-book-cover">
-    <img class="revie-book-thumb" src="<%= review.book.coverImg %>" alt="" />
+    <a href="/browse/<%= review.book.id %> ">
+      <img class="revie-book-thumb" src="<%= review.book.coverImg %>" alt="" />
+    </a>
 
     <section class="review-card">
       <div class="review-user-info">
@@ -35,10 +37,10 @@
 
       <% if (typeof user !== 'undefined') { %> <% if (user.id == review.user.id) { %>
       <div class="review-options-container">
-        <a href="/reviews/<%= review.id %>/edit"><button class="edit-btn btn">Edit Review</button></a>
+        <a href="/reviews/<%= review.id %>/edit"><button class="icon-btn btn"><i class="far fa-edit"></i></button></a>
 
         <form action="/reviews/<%= review.id %>?_method=DELETE" method="POST">
-          <button class="delete-btn btn">Delete Review</button>
+          <button class="icon-btn delete-btn btn"><i class="far fa-trash-alt"></i></button>
         </form>
       </div>
 
