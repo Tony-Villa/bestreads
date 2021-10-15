@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+@use '../base' as f;
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.welcome-img-container {
+  justify-content: center;
+  position: relative;
+  margin-bottom: -0.7rem;
+}
+
+.welcome-img-text {
+  position: absolute;
+  bottom: 2rem;
+  color: $main-color;
+}
+
+.welcome-img {
+  width: 582px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}

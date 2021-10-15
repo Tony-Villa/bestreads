@@ -1,0 +1,26 @@
+<%- include('../partials/head.ejs', {page: 'Browse', script:'collection'}) %>
+
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+  <div class="full flex">
+    <section class="books-container">
+      <% for(let i = 0; i < books.length; i++){ %>
+      <!--  -->
+      <% const book = books[i] %>
+      <div class="book-card">
+        <div class="book-content">
+          <h3 class="browse-book-title">
+            <a href="/browse/<%= book.id %>"><%= book.title %></a>
+          </h3>
+        </div>
+        <figure class="book-thumb-container">
+          <a href="/browse/<%= book.id %>">
+            <img class="book-thumb" src="<%= book.coverImg %> " alt="<%= book.title %> cover image" />
+          </a>
+        </figure>
+      </div>
+      <% } %>
+    </section>
+  </div>
+</body>
