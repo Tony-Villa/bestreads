@@ -11,4 +11,23 @@
 .large-data-input {
   width: 50rem;
   height: 10rem;
+  font-size: 1.25rem;
+}
+
+.edit-form {
+  padding: 1rem;
+}
+
+.edit-btns-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.edit-margin-left {
+  margin-left: 0.5rem;
+}
+
+.rating-edit-page {
+  margin-bottom: 0.5rem;
 }
