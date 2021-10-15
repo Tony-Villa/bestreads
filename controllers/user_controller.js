@@ -39,7 +39,7 @@ router.post('/register', async (req, res) => {
 
 //Login
 router.get('/login', (req, res) => {
-  res.render('user/login.ejs');
+  res.render('user/userLogin.ejs');
 });
 
 router.post('/login', async (req, res) => {

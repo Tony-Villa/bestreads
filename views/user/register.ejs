@@ -4,8 +4,8 @@
   <%- include('../partials/nav.ejs') %>
 
   <main>
-    <section class="add-book-section">
-      <form action="/user/register" method="POST" autocomplete="off">
+    <section class="add-user-section">
+      <form class="resgierter-user-form" action="/user/register" method="POST" autocomplete="off">
         <!-- Username Field -->
         <div class="field-container">
           <label class="label">Name:</label>
@@ -30,8 +30,8 @@
           </div>
         </div>
 
-        <div class="create-book-container">
-          <button class="btn register-user">Register User</button>
+        <div class="register-user-btn-container">
+          <button class="btn register-user confirm">Register User</button>
         </div>
       </form>
     </section>

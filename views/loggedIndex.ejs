@@ -3,9 +3,9 @@
 
 <body>
   <!-- Nav -->
-  <%- include('./partials/nav.ejs') %>
+  <%- include('./partials/nav.ejs', {user}) %>
 
   <main>
-    <p>Yo <%= user %></p>
+    <p>Yo <%= user.name %></p>
   </main>
 </body>

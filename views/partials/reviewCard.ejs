@@ -6,7 +6,9 @@
     <%= review.book.title %></div>
     </h3>
   <div class="review-card-with-book-cover">
-    <img class="revie-book-thumb" src="<%= review.book.coverImg %>" alt="" />
+    <a href="/browse/<%= review.book.id %> ">
+      <img class="revie-book-thumb" src="<%= review.book.coverImg %>" alt="" />
+    </a>
 
     <section class="review-card">
       <div class="review-user-info">

@@ -9,6 +9,7 @@
   cursor: pointer;
   font-family: $header-font;
   font-size: 1rem;
+  margin-top: 1rem;
 }
 
 .confirm {
@@ -44,8 +45,19 @@
   background-color: $main-color;
   text-align: center;
   border: 1px solid $text-color;
+  cursor: pointer;
 
   &:hover {
     background-color: $bg-color;
   }
+}
+
+.link-lookalike {
+  background-color: transparent;
+  color: $text-color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: $content-font;
+  font-size: 1rem;
 }

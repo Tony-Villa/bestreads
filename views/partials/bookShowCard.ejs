@@ -1,24 +1,36 @@
 <section class="book-details-full">
   <div class="show-book-cover">
-    <img class="show-cover-image" src="<%= book.coverImg %> " alt="" />
+    <a href="/browse/<%= book.id %>"><img class="show-cover-image" src="<%= book.coverImg %> " alt="" /></a>
+
     <% if(bookAvgRating) { %>
     <div class="avg-rating"><%= bookAvgRating %></div>
     <% } %>
   </div>
   <div class="show-book-content">
     <div class="show-book-headers">
-      <h2 class="show-book-title"><%= book.title %></h2>
+      <h2 class="show-book-title">
+        <a class="get-book-title" href="/browse/<%= book.id %> "><%= book.title %></a>
+      </h2>
       <h4 class="show-book-author"><%= book.author %></h4>
       <div class="genre-area">
         <p class="show-genre">Genre: <%= book.genre %></p>
       </div>
     </div>
     <div class="show-book-description">
-      <p class="show-book-desc"><%= book.description %></p>
+      <% if(fullBookDesc.length < 255) { %>
+      <p class="show-book-desc abridged-conditional"><%= fullBookDesc %></p>
+      <% } else { %>
+      <p class="show-book-desc abridged-conditional">
+        <%= abridgedBookDesc %> (<button class="link-lookalike expand-desc">more</button>)
+      </p>
+      <% } %>
+      <p class="show-book-desc full-desc hidden">
+        <%= fullBookDesc %> (<button class="link-lookalike less-desc">less</button>)
+      </p>
     </div>
     <div class="show-book-buy">
       <p class="buy-text">Support minority owned bookstores!</p>
-      <button class="buy-btn btn confirm">Buy Here</button>
+      <a href="" target="_blank" class="buy-confirm-link"><button class="buy-btn btn confirm">Buy Here</button></a>
     </div>
   </div>
 </section>
