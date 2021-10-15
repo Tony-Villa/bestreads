@@ -62,6 +62,10 @@ app.use('/user', controllers.user);
 app.use('/reviews', authRequired, controllers.review);
 
 // Routes
+app.get('/*', (req, res) => {
+  const context = { error: req.error };
+  return res.status(404).render('404.ejs', context);
+});
 
 // Listen
 app.listen(PORT, () => {
