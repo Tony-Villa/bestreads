@@ -1,4 +1,5 @@
 const getAverage = (arr) => {
+  if (Array.isArray(arr) == false) return 'Argument Must be an array';
   if (arr.length < 1) return `No Reviews Yet`;
   let total = 0;
 
