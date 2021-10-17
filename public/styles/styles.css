@@ -679,7 +679,7 @@ main {
 
 .books-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
   width: 100%;
   flex-wrap: wrap;
