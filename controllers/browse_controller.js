@@ -58,6 +58,9 @@ router.post('/search', async (req, res, next) => {
     const allBooks = await Book.find({});
     const foundBook = await Book.findOne({ title: req.body.q });
 
+    /////////// I WANT TO COME BACK TO THIS TO HAVE SEARCHBAR SEARCH
+    /////////// INCLUDED WORDS NOT JUST FULL TITLES
+
     // const findBooks = (arr, query) => {
     //   let filteredBooks = [];
 
@@ -83,9 +86,9 @@ router.post('/search', async (req, res, next) => {
     // const context = {
     //   books: filteredBooks,
     // };
+    // res.render('/browse/searchResults.ejs', context);
 
     res.redirect(`/browse/${foundBook._id}`);
-    // res.render('/browse/searchResults.ejs', context);
   } catch (err) {
     console.log(err);
     return next();
