@@ -53,10 +53,23 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.post('/search', async (req, res, next) => {
+router.get('/search', async (req, res, next) => {
   try {
+    // Search term attempt
+    const { q } = req.query;
+    const books = await Book.find({ $text: { $search: q } });
+
+    const context = {
+      books,
+    };
+
+    /*
+    // Working Code! ||| Don't forget to make it router.post if search term doesn't work
     const allBooks = await Book.find({});
     const foundBook = await Book.findOne({ title: req.body.q });
+
+    res.redirect(`/browse/${foundBook._id}`);
+    */
 
     /////////// I WANT TO COME BACK TO THIS TO HAVE SEARCHBAR SEARCH
     /////////// INCLUDED WORDS NOT JUST FULL TITLES
@@ -88,7 +101,7 @@ router.post('/search', async (req, res, next) => {
     // };
     // res.render('/browse/searchResults.ejs', context);
 
-    res.redirect(`/browse/${foundBook._id}`);
+    res.render('browse/searchResults.ejs', context);
   } catch (err) {
     console.log(err);
     return next();
