@@ -71,36 +71,6 @@ router.get('/search', async (req, res, next) => {
     res.redirect(`/browse/${foundBook._id}`);
     */
 
-    /////////// I WANT TO COME BACK TO THIS TO HAVE SEARCHBAR SEARCH
-    /////////// INCLUDED WORDS NOT JUST FULL TITLES
-
-    // const findBooks = (arr, query) => {
-    //   let filteredBooks = [];
-
-    //   arr.filter((el) => {
-    //     if (el.title.toLowerCase().includes(query.toLowerCase())) {
-    //       filteredBooks.push(el);
-    //     } else {
-    //       return;
-    //     }
-    //   });
-
-    //   return filteredBooks;
-    // };
-
-    // const filteredBooks = findBooks(allBooks, req.body.q);
-
-    // console.log(filteredBooks);
-
-    // const filteredBooks = allBooks.filter((book) => {
-    //   book.title.toLowerCase().includes(req.body.q.toLowerCase());
-    // });
-
-    // const context = {
-    //   books: filteredBooks,
-    // };
-    // res.render('/browse/searchResults.ejs', context);
-
     res.render('browse/searchResults.ejs', context);
   } catch (err) {
     console.log(err);
